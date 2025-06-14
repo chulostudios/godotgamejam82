@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://blddfr7stv1f6"]
+
+[ext_resource type="Script" uid="uid://cjlyk81x82oom" path="res://Scenes/raycast_dots/raycast.gd" id="1_oyjuh"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.974866, 0.222791, 0, -0.222791, 0.974866, 0, 0.564458, 1.21915)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+transform = Transform3D(0.856944, 0.265358, -0.124125, -0.286347, 0.839749, -0.181667, 0.0618648, 0.211146, 0.878502, 0.39481, 0, -0.828093)
+
+[node name="Node" type="Node" parent="."]
+script = ExtResource("1_oyjuh")
