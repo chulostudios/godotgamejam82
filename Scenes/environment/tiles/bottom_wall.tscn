@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://br8xmqiwr1671"]
+
+[ext_resource type="PackedScene" uid="uid://cywlsoi5xv3us" path="res://Assets/tiles/walls/bottom_wall.blend" id="1_gpk7r"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="bottom_wall" parent="." instance=ExtResource("1_gpk7r")]

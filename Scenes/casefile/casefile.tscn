@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://nh0p05m2mvuu"]
+
+[ext_resource type="PackedScene" uid="uid://ben87pscucegh" path="res://Assets/casefile/casefile.blend" id="1_y7dvb"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="casefile" parent="." instance=ExtResource("1_y7dvb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00756598, 0, -0.000484884)

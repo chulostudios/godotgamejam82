@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://qw5ujnl8r8vx"]
+
+[ext_resource type="PackedScene" uid="uid://o1ywicoq80wd" path="res://Assets/ring/ring.blend" id="1_h7g45"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="ring" parent="." instance=ExtResource("1_h7g45")]
