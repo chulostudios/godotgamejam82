@@ -1,0 +1,53 @@
+[gd_scene load_steps=9 format=3 uid="uid://dg53fc4h413gl"]
+
+[ext_resource type="PackedScene" uid="uid://fw3nqiq5hd3v" path="res://Scenes/player/player.tscn" id="1_lq4et"]
+[ext_resource type="Script" uid="uid://csq801rr4rirt" path="res://Scenes/interactable/interactable.gd" id="2_siu27"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_lq4et"]
+sky_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
+ground_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
+
+[sub_resource type="Sky" id="Sky_siu27"]
+sky_material = SubResource("ProceduralSkyMaterial_lq4et")
+
+[sub_resource type="Environment" id="Environment_sx6hp"]
+background_mode = 2
+sky = SubResource("Sky_siu27")
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="BoxMesh" id="BoxMesh_siu27"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_siu27"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_sx6hp"]
+
+[node name="Testing" type="Node3D"]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 0, 0, 0)
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_sx6hp")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+use_collision = true
+size = Vector3(100, 1, 100)
+
+[node name="Player" parent="." instance=ExtResource("1_lq4et")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.19817, 0)
+
+[node name="Cube" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 1, -2)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Cube"]
+mesh = SubResource("BoxMesh_siu27")
+surface_material_override/0 = SubResource("StandardMaterial3D_siu27")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cube"]
+shape = SubResource("BoxShape3D_sx6hp")
+
+[node name="InteractionComponent" type="Node" parent="Cube"]
+script = ExtResource("2_siu27")
+metadata/_custom_type_script = "uid://csq801rr4rirt"
