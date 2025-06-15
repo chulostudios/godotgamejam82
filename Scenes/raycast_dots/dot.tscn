@@ -3,6 +3,7 @@
 [sub_resource type="SphereShape3D" id="SphereShape3D_rpohd"]
 
 [node name="Dot" type="Node3D"]
+transform = Transform3D(1.95243, 0.449128, -0.291956, -0.438562, 1.9738, 0.103534, 0.3076, -0.0366013, 2.00075, 0, 0, 0)
 
 [node name="CSGSphere3D" type="CSGSphere3D" parent="."]
 

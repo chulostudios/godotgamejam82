@@ -1,14 +1,27 @@
-[gd_scene load_steps=2 format=3 uid="uid://blddfr7stv1f6"]
+[gd_scene load_steps=4 format=3 uid="uid://blddfr7stv1f6"]
 
 [ext_resource type="Script" uid="uid://cjlyk81x82oom" path="res://Scenes/raycast_dots/raycast.gd" id="1_oyjuh"]
+[ext_resource type="Script" uid="uid://dkrfolosd0nfb" path="res://Scenes/raycast_dots/scanner.gd" id="2_qkpk4"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_qkpk4"]
 
 [node name="Node3D" type="Node3D"]
 
-[node name="Camera3D" type="Camera3D" parent="."]
+[node name="Node" type="Node" parent="."]
+script = ExtResource("1_oyjuh")
+
+[node name="Scanner" type="Node3D" parent="."]
+script = ExtResource("2_qkpk4")
+
+[node name="Camera3D" type="Camera3D" parent="Scanner"]
 transform = Transform3D(1, 0, 0, 0, 0.974866, 0.222791, 0, -0.222791, 0.974866, 0, 0.564458, 1.21915)
 
 [node name="CSGBox3D" type="CSGBox3D" parent="."]
 transform = Transform3D(0.856944, 0.265358, -0.124125, -0.286347, 0.839749, -0.181667, 0.0618648, 0.211146, 0.878502, 0.39481, 0, -0.828093)
 
-[node name="Node" type="Node" parent="."]
-script = ExtResource("1_oyjuh")
+[node name="StaticBody3D" type="StaticBody3D" parent="CSGBox3D"]
+transform = Transform3D(1, -9.31323e-09, 7.45058e-09, -7.45058e-09, 1, 0, -7.45058e-09, 0, 1, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CSGBox3D/StaticBody3D"]
+transform = Transform3D(0.994343, 8.3819e-09, -1.11759e-08, -1.49012e-08, 0.980692, -2.98023e-08, -1.49012e-08, -5.96046e-08, 0.919665, 0, 0, 0)
+shape = SubResource("BoxShape3D_qkpk4")

@@ -3,12 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bqcl7w8vgcee7"
-valid=false
+uid="uid://cywlsoi5xv3us"
+path="res://.godot/imported/bottom_wall.blend-7d81c4ab5e6e15d709dbdaff72cb4752.scn"
 
 [deps]
 
-source_file="res://Assets/blender/Untitled.blend"
+source_file="res://Assets/tiles/walls/bottom_wall.blend"
+dest_files=["res://.godot/imported/bottom_wall.blend-7d81c4ab5e6e15d709dbdaff72cb4752.scn"]
 
 [params]
 
