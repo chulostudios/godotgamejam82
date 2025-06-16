@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=3 uid="uid://c5ngse1wnnf76"]
+
+[ext_resource type="PackedScene" uid="uid://yox8k5fg1omy" path="res://Assets/casefile/paper.blend" id="1_5eucy"]
+
+[sub_resource type="SystemFont" id="SystemFont_5eucy"]
+
+[node name="Paper" type="Node3D"]
+
+[node name="paper_gfx" parent="." instance=ExtResource("1_5eucy")]
+transform = Transform3D(0.994912, 0, 0, 0, 2.5073, 0, 0, 0, 0.994912, 0, 0, 0)
+
+[node name="Label3D" type="Label3D" parent="."]
+transform = Transform3D(0.113227, 0, 0, 0, -2.60717e-08, 0.536388, 0, -0.596452, -2.34463e-08, 0, 0.0012496, 0)
+double_sided = false
+modulate = Color(0, 0, 0, 1)
+text = "What exactly happens during the deep strech? 
+
+Soo we dont actually know
+
+"
+font = SubResource("SystemFont_5eucy")
+font_size = 12
+outline_size = 1
+autowrap_mode = 1
+justification_flags = 1
+width = 0.0
+metadata/_edit_group_ = true
